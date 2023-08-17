@@ -26,3 +26,19 @@ It's worth noting that the decision to use Flyway or other migration tools vs. a
 
 
 
+
+
+
+   e.g
+
+
+
+
+V1__Create_Employee_Table.sql
+
+   CREATE TABLE employees (
+   id SERIAL PRIMARY KEY,
+   email_id VARCHAR(255) NOT NULL,
+   first_name VARCHAR(255) NOT NULL,
+   last_name VARCHAR(255) NOT NULL
+);
