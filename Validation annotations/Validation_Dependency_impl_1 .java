@@ -34,6 +34,15 @@ Gradle:
 implementation 'jakarta.validation:jakarta.validation-api:3.0.0'
 ```
 
+
+    And finaly the  spring-boot-starter-validation
+    
+<dependency> 
+    <groupId>org.springframework.boot</groupId> 
+    <artifactId>spring-boot-starter-validation</artifactId> 
+</dependency>
+
+    
 Make sure to use the appropriate version of the validation API based on your project's requirements.
 
 Once you have included these dependencies, you should be able to use validation annotations and trigger validation in your code.
