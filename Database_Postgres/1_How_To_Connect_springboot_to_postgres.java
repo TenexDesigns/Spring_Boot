@@ -31,6 +31,10 @@ Connecting a PostgreSQL database to a Spring Boot application for creating a RES
    spring.datasource.password=your_password
    spring.datasource.driver-class-name=org.postgresql.Driver
    spring.jpa.hibernate.ddl-auto=update
+
+   Note ----------> Add this two  for handling migrations (remember to add th depency for frlyway )
+   spring.flyway.enabled=true
+   spring.flyway.locations=classpath:db/migration
    ```
    //spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect             -- You can add this to tell hibernte you are using postgress, but its is reducnt because hibernte cn beternin wich data base you are using from the url
 
