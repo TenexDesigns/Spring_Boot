@@ -32,6 +32,7 @@ Connecting a PostgreSQL database to a Spring Boot application for creating a RES
    spring.datasource.driver-class-name=org.postgresql.Driver
    spring.jpa.hibernate.ddl-auto=update
    ```
+   //spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect             -- You can add this to tell hibernte you are using postgress, but its is reducnt because hibernte cn beternin wich data base you are using from the url
 
    For `application.yml`:
    ```yaml
