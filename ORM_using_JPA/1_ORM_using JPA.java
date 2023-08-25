@@ -1,4 +1,6 @@
-The annotations `@Entity`, `@Table`, `@Id`, `@GeneratedValue`, and `@Column` are part of the Java Persistence API (JPA) which is used for Object-Relational Mapping (ORM). They define how your Java classes and their fields map to database tables and columns. Let's break down each annotation's purpose in the context of your `Book` class:
+The annotations `@Entity`, `@Table`, `@Id`, `@GeneratedValue`, and `@Column` are part of the Java Persistence API (JPA)
+which is used for Object-Relational Mapping (ORM). They define how your Java classes and their fields map to database tables and columns. 
+   Let's break down each annotation's purpose in the context of your `Book` class:
 
 1. `@Entity`:
    The `@Entity` annotation is used to mark a class as a JPA entity. An entity represents a table in the database. In your case, the `Book` class is being treated as an entity, and instances of this class will be persisted in a corresponding database table.
