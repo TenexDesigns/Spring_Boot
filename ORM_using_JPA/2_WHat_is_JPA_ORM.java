@@ -1,4 +1,6 @@
-The Java Persistence API (JPA) is a specification that defines how to persist data in Java applications using Object-Relational Mapping (ORM). It allows developers to interact with a relational database without writing SQL queries. JPA is commonly used for building RESTful APIs. Here's an overview of JPA and how it can be used:
+The Java Persistence API (JPA) is a specification that defines how to persist data in Java applications using Object-Relational Mapping (ORM)
+   . It allows developers to interact with a relational database without writing SQL queries. 
+   JPA is commonly used for building RESTful APIs. Here's an overview of JPA and how it can be used:
 
 1. JPA Basics:
    - JPA is a specification that provides a set of concepts and interfaces for persisting data in Java applications[^0^].
