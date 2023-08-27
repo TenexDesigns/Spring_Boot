@@ -13,6 +13,12 @@ Flyway provides a structured way to evolve your database schema, making it more 
 1. **Add Flyway Dependency**:
    Include the Flyway dependency in your `build.gradle` or `pom.xml` file, depending on whether you're using Gradle or Maven as your build tool.
 
+       <dependency>
+      <groupId>org.flywaydb</groupId>
+      <artifactId>flyway-core</artifactId>
+    </dependency>
+
+
 2. **Create Migration Scripts**:
    Create SQL migration scripts in your project's resources folder (usually under `src/main/resources/db/migration`). Each script should be named in a specific format, such as `V1__Create_table.sql`, where `V1` indicates the version of the script.
 
