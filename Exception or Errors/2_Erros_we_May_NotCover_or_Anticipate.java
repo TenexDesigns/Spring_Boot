@@ -1,7 +1,9 @@
-You're right that it might not be possible to cover all possible validation scenarios using the built-in validation annotations or even custom validations. However, you can adopt strategies to handle unanticipated validation errors and provide meaningful responses to users in those cases:
+You're right that it might not be possible to cover all possible validation scenarios using the built-in validation annotations or even custom validations. 
+   However, you can adopt strategies to handle unanticipated validation errors and provide meaningful responses to users in those cases:
 
 1. **Generic Error Messages**:
-   For cases where you can't predict all possible validation errors, you can provide a generic error message like "Invalid input data" or "Validation error occurred." While this might not provide specific details about the error, it gives users a clear indication that something went wrong.
+   For cases where you can't predict all possible validation errors, you can provide a generic error message like "Invalid input data" or "Validation error occurred."
+   While this might not provide specific details about the error, it gives users a clear indication that something went wrong.
 
 2. **Logging**:
    Always log validation errors on the server side. Even if you can't display specific error messages to users, logging the errors can help you diagnose and fix issues in the application. Include relevant information like the endpoint, request data, and any available context.
