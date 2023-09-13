@@ -10,7 +10,8 @@ In Spring Boot, throwing errors (exceptions) is a fundamental part of applicatio
 
 2. **Validation Errors**: If input data doesn't meet certain criteria, you might throw exceptions like `IllegalArgumentException` or `ValidationException`.
 
-3. **Business Logic Errors**: When your business rules are violated, you can throw custom exceptions to indicate these errors. For example, if a user tries to make a booking when a certain time slot is already booked.
+3. **Business Logic Errors**: When your business rules are violated, you can throw custom exceptions to indicate these errors. 
+    For example, if a user tries to make a booking when a certain time slot is already booked.
 
 4. **Concurrency Issues**: In multi-threaded environments, you might encounter situations where multiple threads access and modify data simultaneously. In such cases, you might use exceptions like `ConcurrentModificationException` to indicate concurrent access issues.
 
