@@ -1,14 +1,24 @@
-It seems like you're observing a difference in the error response when handling exceptions globally versus handling them specifically for a particular case. Let me explain what might be happening:
+It seems like you're observing a difference in the error response when handling exceptions globally versus handling them specifically for a particular case.
+    Let me explain what might be happening:
 
-1. **Specific Exception Handling**: When you handle the `ResourceNotFoundException` specifically for the case where an employee with a given ID is not found, you have control over what response message is returned. In this case, you are returning a custom error message: `"Employee of id " + id + " not found"`. This provides more context to the client about the error.
+1. **Specific Exception Handling**: When you handle the `ResourceNotFoundException` specifically for the case where an employee with a given ID is not found,
+    you have control over what response message is returned. In this case, you are returning a custom error message: `"Employee of id " + id + " not found"`. 
+    This provides more context to the client about the error.
 
-2. **Global Exception Handling**: When you set up global exception handling, you might have a configuration that converts exceptions into standardized error responses. This configuration might be reducing the error response to a more concise format, which is what you're observing. This is often done to keep error responses consistent across the entire application.
+2. **Global Exception Handling**: When you set up global exception handling, you might have a configuration that converts exceptions into standardized error responses.
+    This configuration might be reducing the error response to a more concise format, which is what you're observing.
+    This is often done to keep error responses consistent across the entire application.
 
-It's important to note that the behavior you're seeing is likely due to how your global exception handler is configured. Global exception handling is useful for handling exceptions consistently across your application, but it might not provide the same level of specific error messaging as when handling exceptions on a case-by-case basis.
+It's important to note that the behavior you're seeing is likely due to how your global exception handler is configured. 
+    Global exception handling is useful for handling exceptions consistently across your application, but it might not provide the same level of specific error messaging
+    as when handling exceptions on a case-by-case basis.
 
-To retain more detailed error responses while using global exception handling, you might want to adjust your global exception handling configuration to include more context in the error messages. This might involve accessing the original exception's message and details within your global exception handler and including them in the response.
+To retain more detailed error responses while using global exception handling, you might want to adjust your global exception handling 
+    configuration to include more context in the error messages. This might involve accessing the original exception's message and details within your
+    global exception handler and including them in the response.
 
-Remember that the design of error responses in a REST API should strike a balance between providing useful information to clients for debugging purposes and not exposing sensitive information about the application's internals.
+Remember that the design of error responses in a REST API should strike a balance between providing useful information to clients 
+    for debugging purposes and not exposing sensitive information about the application's internals.
 
 
 
@@ -89,7 +99,7 @@ The Erros will look like this if we make the above modifications
 
             Optional<Employee> employee = employeeRepository.findById(id);
             if(employee.isPresent()){
-                employeeRepository.deleteById(id);
+                employeeRepository.deleteById(id);        // Use service and not repository directly
                 return  ResponseEntity.ok("Employee of id " + id + " has been deleted");
 
 
